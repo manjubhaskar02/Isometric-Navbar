@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #434750;
+}
+
+.effect-one ul {
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+.effect-one ul li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+    background-color: #3e3f46;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+
+.effect-one ul li::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0px;
+    left: -40px;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    background-color: #2e3133;
+}
+
+.effect-one ul li:hover::before {
+    background-color: #33a3ee;
+}
+
+.effect-one ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: -40px;
+    left: 0px;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+    background-color: #2e3133;
+
+}
+
+.effect-one ul li:hover::after {
+    background-color: #33a3ee;
+}
+
+.effect-one ul li:hover {
+    background-color: #33a3ee;
+    transform: translateX(-50px);
+}
+
+.effect-one ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.05em;
+    color: #999;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+ul li a:hover {
+    color: #fff;
+
+}
+
+ul li:last-child::after {
+    box-shadow: -120px 120px 30px rgba(0, 0, 0, 0.2);
+}
